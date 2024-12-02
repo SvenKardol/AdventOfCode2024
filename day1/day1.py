@@ -15,11 +15,11 @@ def do_part1():
     right = []
     total = 0
     for line in data:
-
         left.append(int(line.split()[0]))
         right.append(int(line.split()[1]))
-        left.sort()
-        right.sort()
+
+    left.sort()
+    right.sort()
 
     for(x, y) in zip(left, right):
         total += math.fabs(x - y)

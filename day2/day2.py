@@ -6,7 +6,6 @@ def read_data():
     # with open("example.txt", "r") as file:
     with open("input.txt", "r") as file:
         dataRaw = file.read()
-
     data = dataRaw.split("\n")
 
 def do_part1():
@@ -41,7 +40,6 @@ def do_part2():
                 break
 
     print(safe)
-
 
 if __name__ == '__main__':
     read_data()
