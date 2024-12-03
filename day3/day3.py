@@ -9,9 +9,9 @@ def read_data():
 
     data = dataRaw.replace("\n", "")
 
-def do_part1():
+def do_part1(input):
     total = 0
-    t = re.findall("mul\([0-9]+,[0-9]+\)", data)
+    t = re.findall("mul\([0-9]+,[0-9]+\)", input)
 
     for item in t:
         numbers = re.findall(r'\d+', item)
@@ -20,18 +20,12 @@ def do_part1():
     print(total)
 
 def do_part2():
-    total = 0
-    stripped_line=re.sub(r"don't\(\).+?do\(\)""", "", data)
-    t = re.findall("mul\([0-9]+,[0-9]+\)", stripped_line)
+    input_part2 = re.sub(r"don't\(\).+?do\(\)""", "", data)
+    do_part1(input_part2)
 
-    for item in t:
-        numbers = re.findall(r'\d+', item)
-        total += int(numbers[0]) * int(numbers[1])
-
-    print(total)
 
 if __name__ == '__main__':
     read_data()
-    do_part1()
+    do_part1(data)
     do_part2()
 
