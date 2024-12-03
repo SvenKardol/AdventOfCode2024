@@ -15,7 +15,7 @@ def do_part1():
 
     for item in t:
         numbers = re.findall(r'\d+', item)
-        total += int(numbers[0]) * int(numbers[1])1])
+        total += int(numbers[0]) * int(numbers[1])
 
     print(total)
 
