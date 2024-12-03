@@ -20,7 +20,7 @@ def do_part1(input):
     print(total)
 
 def do_part2():
-    input_part2 = re.sub(r"don't\(\).+?", "", re.sub(r"don't\(\).+?do\(\)", "", data))
+    input_part2 = re.sub(r"don't\(\).*", "", re.sub(r"don't\(\).+?do\(\)", "", data))
     do_part1(input_part2)
 
 
