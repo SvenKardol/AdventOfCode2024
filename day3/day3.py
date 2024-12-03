@@ -14,7 +14,8 @@ def do_part1():
     t = re.findall("mul\([0-9]+,[0-9]+\)", data)
 
     for item in t:
-        total +=  int(item.replace("mul(", "").replace(")", "").split(",")[0]) * int(item.replace("mul(", "").replace(")", "").split(",")[1])
+        numbers = re.findall(r'\d+', item)
+        total += int(numbers[0]) * int(numbers[1])1])
 
     print(total)
 
@@ -24,8 +25,8 @@ def do_part2():
     t = re.findall("mul\([0-9]+,[0-9]+\)", stripped_line)
 
     for item in t:
-        total += int(item.replace("mul(", "").replace(")", "").split(",")[0]) * int(
-            item.replace("mul(", "").replace(")", "").split(",")[1])
+        numbers = re.findall(r'\d+', item)
+        total += int(numbers[0]) * int(numbers[1])
 
     print(total)
 
