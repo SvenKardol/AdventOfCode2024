@@ -1,1 +1,3 @@
 advent-of-code-data~=2.0.4
+
+pip config set global.trusted-host     "pypi.org files.pythonhosted.org pypi.python.org" --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.o
