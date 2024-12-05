@@ -30,7 +30,7 @@ def do_part1():
 def check_instructions(instructions, pages):
     for instruction in instructions:
         first, second = instruction[0], instruction[1]
-        if pages.__contains__(first) and pages.__contains__(second) and pages.index(first) > pages.index(second):
+        if first in pages and second in pages and pages.index(first) > pages.index(second):
             return False
     return True
 
@@ -59,7 +59,7 @@ def do_part2():
 def check_instructions_swap_pages(instructions, pages):
     for instruction in instructions:
         first, second = instruction[0], instruction[1]
-        if pages.__contains__(first) and pages.__contains__(second) and pages.index(first) > pages.index(second):
+        if first in pages and second in pages and pages.index(first) > pages.index(second):
             pages.pop(pages.index(second))
             pages.insert(pages.index(first) + 1, second)
             return False
