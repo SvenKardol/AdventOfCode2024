@@ -4,7 +4,7 @@ from aocd import get_data
 
 
 def read_data():
-    global dataRaw, data, R, C
+    global dataRaw, data
     # dataRaw = get_data(year=2024, day=1)
     # with open("example.txt", "r") as file:
     # with open("example2.txt", "r") as file:
